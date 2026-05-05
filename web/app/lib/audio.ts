@@ -12,7 +12,7 @@
 //      above still respects that preference.
 
 const STORAGE_KEY = "apc.sound.muted";
-const SRC = "/jingle.wav";
+const SRC = "/theme.mp3";
 
 let audio: HTMLAudioElement | null = null;
 let gestureBound = false;

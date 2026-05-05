@@ -2,7 +2,7 @@ import { Logo } from "./Logo";
 import { PixelCardRow } from "./Ornaments";
 import { PlayerRow } from "./PlayerRow";
 import type { RankedPlayer } from "../lib/types";
-import { SHEETS_URL } from "../lib/config";
+import { SHEETS_URL, TOKENS_URL } from "../lib/config";
 import styles from "./Leaderboard.module.css";
 
 type Props = {
@@ -51,6 +51,15 @@ export function Leaderboard({ players }: Props) {
           ▶ VIEW LEDGER ◀
         </a>
         <div className={styles.actionsHint}>FULL ACCOUNTING ON GOOGLE SHEETS</div>
+
+        <a
+          className={styles.tokensButton}
+          href={TOKENS_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ▶ CONVERT YOUR SCORE TO CLAUDE TOKENS ◀
+        </a>
       </div>
 
       <PixelCardRow />

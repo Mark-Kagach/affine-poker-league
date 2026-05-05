@@ -71,7 +71,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
+  gap: 12px;
 }
 
 .ledgerButton {
@@ -111,6 +111,41 @@
   font-size: 8px;
   letter-spacing: 1.5px;
   color: #555a73;
+}
+
+.tokensButton {
+  margin-top: 4px;
+  display: inline-block;
+  font-family: var(--font-press-start), monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding: 12px 18px;
+  color: #ff3df2;
+  background: #06060f;
+  border: 2px solid #ff3df2;
+  text-decoration: none;
+  text-align: center;
+  box-shadow:
+    0 0 6px rgba(255, 61, 242, 0.5),
+    inset 0 0 0 2px #000;
+  cursor: pointer;
+  transition: transform 80ms ease-out, background 120ms ease-out, color 120ms ease-out;
+  max-width: 100%;
+}
+
+.tokensButton:hover {
+  background: #ff3df2;
+  color: #06060f;
+  transform: translateY(-1px);
+}
+
+.tokensButton:focus-visible {
+  outline: 2px solid #ffcf3d;
+  outline-offset: 3px;
+}
+
+.tokensButton:active {
+  transform: translateY(1px);
 }
 
 .footer {
@@ -169,8 +204,21 @@
     letter-spacing: 1.5px;
     padding: 10px 14px;
   }
+  .tokensButton {
+    font-size: 9px;
+    letter-spacing: 1.2px;
+    padding: 10px 12px;
+  }
   .actionsHint {
     font-size: 7px;
     letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tokensButton {
+    font-size: 8px;
+    letter-spacing: 1px;
+    padding: 9px 8px;
   }
 }
