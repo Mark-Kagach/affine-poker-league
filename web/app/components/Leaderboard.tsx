@@ -23,8 +23,8 @@ export function Leaderboard({ players }: Props) {
       <div className={styles.tableHeader} aria-hidden="true">
         <span>RANK</span>
         <span>Δ</span>
-        <span>PLAYER</span>
         <span></span>
+        <span>PLAYER</span>
         <span className={styles.headerRight}>SCORE</span>
         <span className={`${styles.headerRight} ${styles.headerMuted}`}>BOUGHT</span>
         <span className={`${styles.headerRight} ${styles.headerMuted}`}>FINAL</span>

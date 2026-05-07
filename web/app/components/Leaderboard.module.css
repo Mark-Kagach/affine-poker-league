@@ -177,7 +177,9 @@
   }
 }
 
-@media (max-width: 820px) {
+/* Below 720px, the row drops to 4 columns (Δ, portrait, name, score).
+ * Header must match: hide RANK header (1st child) + the muted headers. */
+@media (max-width: 720px) {
   .frame {
     border-width: 2px;
   }
@@ -185,13 +187,14 @@
     padding: 14px 12px;
   }
   .tableHeader {
-    grid-template-columns: 36px 36px 56px 1fr 70px 56px 56px 36px;
-    gap: 6px;
-    padding: 8px 8px;
-    font-size: 8px;
+    grid-template-columns: 38px 56px 1fr 84px;
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 9px;
   }
-  .headerMuted {
-    font-size: 7px;
+  .tableHeader > span:first-child,
+  .tableHeader > .headerMuted {
+    display: none;
   }
   .footer {
     font-size: 8px;
@@ -215,7 +218,13 @@
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 380px) {
+  .tableHeader {
+    grid-template-columns: 32px 48px 1fr 72px;
+    gap: 6px;
+    padding: 8px 8px;
+    font-size: 8px;
+  }
   .tokensButton {
     font-size: 8px;
     letter-spacing: 1px;
