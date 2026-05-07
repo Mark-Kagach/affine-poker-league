@@ -177,8 +177,8 @@
   }
 }
 
-/* Below 720px, the row drops to 4 columns (Δ, portrait, name, score).
- * Header must match: hide RANK header (1st child) + the muted headers. */
+/* Below 720px, the row drops to 5 columns (rank, Δ, portrait, name, score).
+ * Header must match: hide the muted headers (BOUGHT/FINAL/GAMES). */
 @media (max-width: 720px) {
   .frame {
     border-width: 2px;
@@ -187,12 +187,11 @@
     padding: 14px 12px;
   }
   .tableHeader {
-    grid-template-columns: 38px 56px 1fr 84px;
+    grid-template-columns: 42px 38px 56px 1fr 88px;
     gap: 8px;
-    padding: 10px 12px;
+    padding: 10px 10px;
     font-size: 9px;
   }
-  .tableHeader > span:first-child,
   .tableHeader > .headerMuted {
     display: none;
   }
@@ -220,7 +219,7 @@
 
 @media (max-width: 380px) {
   .tableHeader {
-    grid-template-columns: 32px 48px 1fr 72px;
+    grid-template-columns: 36px 32px 48px 1fr 76px;
     gap: 6px;
     padding: 8px 8px;
     font-size: 8px;

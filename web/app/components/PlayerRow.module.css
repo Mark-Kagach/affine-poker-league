@@ -168,19 +168,20 @@
 }
 
 /* === MOBILE SIMPLIFIED VIEW ===
- * Below 720px (phones), drop RANK / BOUGHT / FINAL / GAMES columns.
- * Keep only: Δ (rank change), portrait, name, score.
- * Top-3 podium tier still readable via row tint and colored score. */
+ * Below 720px (phones), drop the BOUGHT / FINAL / GAMES columns.
+ * Keep: rank, Δ (rank change), portrait, name, score. */
 @media (max-width: 720px) {
   .row {
-    grid-template-columns: 38px 56px 1fr 84px;
+    grid-template-columns: 42px 38px 56px 1fr 88px;
     gap: 8px;
-    padding: 12px 12px;
+    padding: 12px 10px;
     font-size: 11px;
   }
-  .rank,
   .muted {
     display: none;
+  }
+  .rank {
+    font-size: 12px;
   }
   .name {
     font-size: 12px;
@@ -189,18 +190,27 @@
   .score {
     font-size: 13px;
   }
+  .medal {
+    font-size: 11px;
+  }
 }
 
 @media (max-width: 380px) {
   .row {
-    grid-template-columns: 32px 48px 1fr 72px;
+    grid-template-columns: 36px 32px 48px 1fr 76px;
     gap: 6px;
     padding: 10px 8px;
+  }
+  .rank {
+    font-size: 11px;
   }
   .name {
     font-size: 11px;
   }
   .score {
     font-size: 11px;
+  }
+  .medal {
+    font-size: 10px;
   }
 }
